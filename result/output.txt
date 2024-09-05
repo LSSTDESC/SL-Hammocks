@@ -36,8 +36,8 @@ prefix_result.dat
 -----------------------
 prefix_log.dat
 
-# num_image zs x_src y_src, sep, ein, fs, flag_out, flag_h
-# x_img, y_img, mag, delay, kappa, gamma1, gamma2 kappa_stellar
+# num_image zs x_src y_src, sep, ein, fr, zs, fs, flag_out, flag_sh_trunc
+# x_img[arcsec], y_img[arcsec], mag, delay[day], kappa, gamma1, gamma2 kappa_stellar
 # zmin, zmax, log10Mhmin, log10Mhmax, log10mshmin, log10mshmax, n_bins: AA, BB, CC, DD, XX, YY, ZZ
 # n_bins is # of mass bins of subhalo mass function from msh = [10^XX, 10^YY] (default 100)
 
