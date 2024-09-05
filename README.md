@@ -21,3 +21,11 @@ python gen_mock_halo.py --area=50000.0 --ilim=22.6 --zlmax=2.0 --source=sn --pre
 ## Output files
 
 See [output.txt](/result/output.txt) for some explanations.
+
+
+## Licensing, credits and feedback
+You are welcome to re-use the code, which is open source and freely available under terms consistent with BSD 3-Clause licensing (see [LICENSE](/LICENSE)).
+If you use SL-hammocks for any scientific publication, we kindly ask you to cite this [github repository](https://github.com/LSSTDESC/SL-hammocks) and the companion paper https://arxiv.org/abs/24XX.XXXX (coming soon). 
+
+The current lead of this project and the development of SL-hammocks is Katsuya T. Abe (kta-cosmo).
+For feedback, please contact the author via github issues or email (ktabecosmology@gmail.com).
