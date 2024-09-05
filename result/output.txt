@@ -1,0 +1,56 @@
+-----------------------
+prefix_result.dat
+
+# total event number: XX (subhalo YY), single eventnumber: ZZ
+# total area, nworkers, and exec time : DD [deg^2], WW process, SS [sec]
+
+# each row corresponds to 1 strong lens system
+# i-th component, 0 = subhalos, 1 = satellite galaxy, 2 = host halos, 3 = central galaxy, 4 = perturbation (e.g. external shear)
+# For lensed events only by host halos, [12-27] store -1, then please extract using e.g. np.extract(arr != -1, arr) for host halos events
+# Above XX equals # of muliply image events in this "prefix_result.dat". To compare with ``gen_mock_mo10p", please filter flag_output = 1 or 3
+
+[0]: number of images
+[1]: original source i-band magnitude
+[2]: i-band magnitude of lensed image (fainter image for double and 3rd brightest image for quad)
+[3]: image separation [arcsec]
+[4]: einstein radius of lens events [arcsec]
+[5]: flag_type, 0 for lensed quasar,  1 for Ia, 2 for Ibc, 3 for IIP, 4 for IIL, 5 for IIn
+[6]: frac_msh_trnc, ratio between mass of subhalos before and after their truncation, if no subhalos, then -1
+[7]: i-band magnitude of brightest lensed images
+[8]: flag_output
+      - 1 for observable multiply image events in LSST (not limited by minimum image separation angle, but by magnitude, flux ratio and maximum separation)
+      - 2 for singly/multiply image events with high mag. (max(mu)>flag_mag, default = 3)
+      - 3 for observable multiply image events with high mag.
+[9]: source redshift 
+[10]: source x [arcsec]
+[11]: source y [arcsec]
+[12+8*i]: flag_mass_dist_type of i-th component, 1 = anfw, 2 = ahern, 3 = pert in terms of glafic
+[13+8*i]: lens redshift of i-th component
+[14+8*i]: lens mass of i-th component [Msun/h]
+[15+8*i]: lens x of i-th component [arcsec]
+[16+8*i]: len y of i-th component [arcsec]
+[17+8*i]: lens ellipticity of i-th component
+[18+8*i]: lens position angle of i-th component [deg]
+[19+8*i]: param1 (concentration param, tb, ...) of i-th component, see [manual of glafic](https://github.com/oguri/glafic2/blob/main/manual/man_glafic.pdf)
+
+-----------------------
+prefix_log.dat
+
+# num_image zs x_src y_src, sep, ein, fs, flag_out, flag_h
+# x_img, y_img, mag, delay, kappa, gamma1, gamma2 kappa_stellar
+# zmin, zmax, log10Mhmin, log10Mhmax, log10mshmin, log10mshmax, n_bins: AA, BB, CC, DD, XX, YY, ZZ
+# n_bins is # of mass bins of subhalo mass function from msh = [10^XX, 10^YY] (default 100)
+
+each lens system consist of following unit
+lenses are listed in the same order as in mock_qso_result.dat
+
+N=num_image zs x_src y_src sep in fs flag_out frac_msh_trnc(-1:halo, msh_trunc/msh_acc:subhalo)
+ x_img[1] y_img[1] mag[1] delay[1]  kappa[1] gamma1[1] gamma2[1] kappa_stellar[1]
+ ...
+ x_img[N] y_img[N] mag[N] delay[N]  kappa[N] gamma1[N] gamma2[N] kappa_stellar[N]
+
+time delays are in units of days
+fs: flux ratio for num_image = 2 or 3
+flag_output: 1 for observable multiply image events in LSST, 2 for singly/multiply image events with high mag. (max(mu)>flag_mag, default = 3), 3 for observable multiply image events with high mag.
+
+-----------------------
