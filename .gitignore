@@ -1,0 +1,14 @@
+result/*.dat
+result/*.txt
+result/*
+*.sh
+*_old.py
+*_change.py
+nohup*
+*.npz
+*.py#
+*~
+.DS_Store
+__pycache__/
+*.prof
+*.dat
