@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below in addition to our relevant papers."
+authors:
+- family-names: "Abe"
+  given-names: "Katsuya T."
+  orcid: "https://orcid.org/0000-0001-5474-4716"
+- family-names: "Oguri"
+  given-names: "Masamune"
+  orcid: "https://orcid.org/0000-0003-3484-399X"
+title: "SL-Hammocks"
+version: 1.0.0
+date-released: 2024-09-01
+url: "https://github.com/LSSTDESC/SL-Hammocks"
