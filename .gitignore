@@ -11,4 +11,3 @@ nohup*
 .DS_Store
 __pycache__/
 *.prof
-*.dat
