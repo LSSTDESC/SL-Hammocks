@@ -23,6 +23,8 @@ python gen_mock_halo.py --area=50000.0 --ilim=22.6 --zlmax=2.0 --source=sn --pre
 ## Output files
 
 See [output.txt](/result/output.txt) for some explanations.
+You can download several examples of mock catalogs that are the output of this code in the [data_public](https://github.com/kta-cosmo/data_public/tree/main/SL_hammocks_catalogs) repository of LSST.
+
 
 
 ## Licensing, credits and feedback
